@@ -26,6 +26,9 @@ class Maze:
                 stack.pop()
 
     def solve(self, start, end):
+        """
+        documentation for solve method
+        """
         open_set = []
         closed_set = set()
         heapq.heappush(open_set, (0, start, []))
@@ -51,8 +54,8 @@ class Maze:
     def __str__(self):
         maze_str = ""
         for row in self.grid:
-            maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + "
-"
+            # строка вывода Maze
+            maze_str += "".join(["#" if cell == 1 else " " for cell in row]) 
         return maze_str
 
 if __name__ == "__main__":

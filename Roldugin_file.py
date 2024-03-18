@@ -55,6 +55,7 @@ class MazeClass:
 "
         return maze_str
 
+#main func
 if __name__ == "__main__":
     width = 21
     height = 21

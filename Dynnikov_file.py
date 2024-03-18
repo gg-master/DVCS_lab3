@@ -1,6 +1,8 @@
 import random
 import heapq
 
+#adding new usefull comments
+
 class Maze:
     def __init__(self, width, height):
         self.width = width
@@ -28,6 +30,7 @@ class Maze:
                 stack.pop()
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------
+#another comment for understanding code
 
     def solve(self, start, end):
         open_set = []
@@ -61,6 +64,8 @@ class Maze:
         return maze_str
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------
+#adding another comment for executional block
+
 
 if __name__ == "__main__":
     width = 20

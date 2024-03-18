@@ -10,7 +10,7 @@ class Maze:
     def generate(self):
         stack = [(0, 0)]
         while stack:
-            current_cell = stack[-1]//Second edit
+            current_cell = stack[-1]
             x, y = current_cell
             self.grid[y][x] = 1
             neighbors = [(x+2, y), (x-2, y), (x, y+2), (x, y-2)]
@@ -23,7 +23,7 @@ class Maze:
                 self.grid[wall_y][wall_x] = 1
                 stack.append(next_cell)
             else:
-                stack.pop()
+                stack.pop()//edit4
 
     def solve(self, start, end):
         open_set = []

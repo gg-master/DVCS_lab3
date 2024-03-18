@@ -1,7 +1,8 @@
 import random
 import heapq
+import numpy
 
-class Maze:
+class zame:
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -49,25 +50,25 @@ class Maze:
         return [(nx, ny) for nx, ny in neighbors if 0 <= nx < self.width and 0 <= ny < self.height and self.grid[ny][nx] == 1]
 
     def __str__(self):
-        maze_str = ""
+        zame_str = ""
         for row in self.grid:
-            maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + "
+            zame_str += "".join(["#" if cell == 1 else " " for cell in row]) + "
 "
-        return maze_str
+        return zame_str
 
 if __name__ == "__main__":
     width = 21
     height = 21
-    maze = Maze(width, height)
-    maze.generate()
-    print("Generated Maze:")
-    print(maze)
+    zame = zame(width, height)
+    zame.generate()
+    print("Generated zame:")
+    print(zame)
     start = (1, 1)
     end = (width-2, height-2)
-    path = maze.solve(start, end)
-    print("Solved Maze:")
+    path = zame.solve(start, end)
+    print("Solved zame:")
     for cell in path:
         x, y = cell
-        maze.grid[y][x] = 2
-    print(maze)
+        zame.grid[y][x] = 2
+    print(zame)
 

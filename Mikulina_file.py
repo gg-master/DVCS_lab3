@@ -4,11 +4,11 @@ import heapq
 class Maze:
     def __init__(self, width, height):
         self.width = width
-        self.height = height
+        self.height = height  
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
     def generate(self):
-        stack = [(0, 0)] 
+        stack = [(0, 0)] //2
         while stack:
             current_cell = stack[-1]
             x, y = current_cell

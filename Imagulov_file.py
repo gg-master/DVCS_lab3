@@ -12,7 +12,7 @@ class Maze:
         while stack:
             current_cell = stack[-1]
             x, y = current_cell
-            self.grid[y][x] = 1
+            self.grid[y][x] = 0
             neighbors = [(x+2, y), (x-2, y), (x, y+2), (x, y-2)]
             unvisited_neighbors = [n for n in neighbors if 0 <= n[0] < self.width and 0 <= n[1] < self.height and self.grid[n[1]][n[0]] == 0]
             if unvisited_neighbors:

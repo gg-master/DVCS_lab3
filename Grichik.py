@@ -7,6 +7,7 @@ class Maze:
         self.height = height
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
+//commit
     def generate(self):
         stack = [(0, 0)]
         while stack:
@@ -54,7 +55,7 @@ class Maze:
             maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + "
 "
         return maze_str
-
+//fdsf
 if __name__ == "__main__":
     width = 21
     height = 21

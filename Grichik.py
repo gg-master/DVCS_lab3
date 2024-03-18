@@ -54,7 +54,7 @@ class Maze:
             maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + "
 "
         return maze_str
-
+//dgsgdsg
 if __name__ == "__main__":
     width = 21
     height = 21

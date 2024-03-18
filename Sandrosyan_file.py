@@ -61,12 +61,12 @@ if __name__ == "__main__":
     height = 21
     maze = Maze(width, height)
     maze.generateMaze()
-    print("Generated Maze:")
+    print("Original Maze:")
     print(maze)
     start = (1, 1)
     end = (width-2, height-2)
     path = maze.solve(start, end)
-    print("Solved Maze:")
+    print("Result Maze:")
     for cell in path:
         x, y = cell
         maze.grid[y][x] = 2

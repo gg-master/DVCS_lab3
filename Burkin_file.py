@@ -51,8 +51,7 @@ class Maze:
     def __str__(self):
         maze_str = ""
         for row in self.grid:
-            maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + "
-"
+            maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + ""
         return maze_str
 
 if __name__ == "__main__":

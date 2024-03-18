@@ -1,7 +1,7 @@
 import random
 import heapq
 
-#hgfdcvbnkl
+#hgfdhcd
 
 class Maze:
     def __init__(self, width, height):

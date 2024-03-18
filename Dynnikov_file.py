@@ -58,9 +58,11 @@ class Maze:
             maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + " "
         return maze_str
 
+#adding another comment for executional block
+
 if __name__ == "__main__":
-    width = 21
-    height = 21
+    width = 20
+    height = 20
     maze = Maze(width, height)
     maze.generate()
     print("Generated Maze:")

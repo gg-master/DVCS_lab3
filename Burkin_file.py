@@ -51,21 +51,24 @@ class Maze:
     def __str__(self):
         maze_str = ""
         for row in self.grid:
-            maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + "
-"
+            maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + ""
         return maze_str
 
 if __name__ == "__main__":
     width = 21
     height = 21
+
     maze = Maze(width, height)
     maze.generate()
+
     print("Generated Maze:")
     print(maze)
     start = (1, 1)
     end = (width-2, height-2)
+
     path = maze.solve(start, end)
     print("Solved Maze:")
+    
     for cell in path:
         x, y = cell
         maze.grid[y][x] = 2

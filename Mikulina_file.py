@@ -8,7 +8,7 @@ class Maze:
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
     def generate(self):
-        stack = [(0, 0)]
+        stack = [(0, 0)] //com
         while stack:
             current_cell = stack[-1]
             x, y = current_cell

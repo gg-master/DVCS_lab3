@@ -1,6 +1,6 @@
 import random
 import heapq
-
+import pygame
 class Maze:
     def __init__(self, width, height):
         self.width = width

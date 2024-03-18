@@ -18,9 +18,9 @@ class Maze:
             if unvisited_neighbors:
                 next_cell = random.choice(unvisited_neighbors)
                 nx, ny = next_cell
-                wall_x = (nx + x) // 2
-                wall_y = (ny + y) // 2
-                self.grid[wall_y][wall_x] = 1
+                wall_x = (nx + x) // 5
+                wall_y = (ny + y) // 5
+                self.grid[wall_y][wall_x] = 10
                 stack.append(next_cell)
             else:
                 stack.pop()

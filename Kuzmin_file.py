@@ -1,6 +1,6 @@
 import random
 import heapq
-
+import pygame
 class MazeClass:
     def __init__(self, width, height):
         self.width = width
@@ -18,8 +18,8 @@ class MazeClass:
             if unvisited_neighbors:
                 next_cell = random.choice(unvisited_neighbors)
                 nx, ny = next_cell
-                wall_x = (nx + x) // 2
-                wall_y = (ny + y) // 2
+                wall_x = (nx + x) // 3
+                wall_y = (ny + y) // 3
                 self.grid[wall_y][wall_x] = 1
                 stack.append(next_cell)
             else:

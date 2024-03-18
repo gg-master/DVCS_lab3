@@ -1,11 +1,15 @@
 import random
 import heapq
 
+#adding new usefull comments
+
 class Maze:
     def __init__(self, width, height):
         self.width = width
         self.height = height
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------
 
     def generate(self):
         stack = [(0, 0)]
@@ -25,6 +29,9 @@ class Maze:
             else:
                 stack.pop()
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------
+#another comment for understanding code
+
     def solve(self, start, end):
         open_set = []
         closed_set = set()
@@ -40,6 +47,8 @@ class Maze:
                 new_path = path + [current]
                 heapq.heappush(open_set, (len(new_path) + self.heuristic(neighbor, end), neighbor, new_path))
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------
+
     def heuristic(self, a, b):
         return abs(b[0] - a[0]) + abs(b[1] - a[1])
 
@@ -51,13 +60,16 @@ class Maze:
     def __str__(self):
         maze_str = ""
         for row in self.grid:
-            maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + "
-"
+            maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + " "
         return maze_str
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------
+#adding another comment for executional block
+
+
 if __name__ == "__main__":
-    width = 21
-    height = 21
+    width = 20
+    height = 20
     maze = Maze(width, height)
     maze.generate()
     print("Generated Maze:")

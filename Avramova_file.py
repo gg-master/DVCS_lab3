@@ -23,7 +23,7 @@ class Maze:
                 self.grid[wall_y][wall_x] = 1
                 stack.append(next_cell)
             else:
-                stack.pop()
+                stack.pop()//edit4
 
     def solve(self, start, end):
         open_set = []

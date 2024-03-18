@@ -1,5 +1,6 @@
 import random
 import heapq
+import numpy
 
 class Maze:
     def __init__(self, width, height):
@@ -7,9 +8,9 @@ class Maze:
         self.height = height
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
-    def generate(self):
+    def generateMaze(self):
         stack = [(0, 0)]
-        while stack:
+        while stack != 0:
             current_cell = stack[-1]
             x, y = current_cell
             self.grid[y][x] = 1
@@ -56,16 +57,16 @@ class Maze:
         return maze_str
 
 if __name__ == "__main__":
-    width = 21
-    height = 21
+    width = 30
+    height = 30
     maze = Maze(width, height)
-    maze.generate()
-    print("Generated Maze:")
+    maze.generateMaze()
+    print("Original Maze:")
     print(maze)
     start = (1, 1)
     end = (width-2, height-2)
     path = maze.solve(start, end)
-    print("Solved Maze:")
+    print("Result Maze:")
     for cell in path:
         x, y = cell
         maze.grid[y][x] = 2

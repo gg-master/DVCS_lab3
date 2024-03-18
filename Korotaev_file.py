@@ -1,11 +1,12 @@
 import random
 import heapq
 
+#Maze generator
 class Maze:
     def __init__(self, width, height):
         self.width = width
         self.height = height
-        self.grid = [[0 for _ in range(width)] for _ in range(height)]
+        self.grid = [[1 for _ in range(width)] for _ in range(height)]
 
     def generate(self):
         stack = [(0, 0)]

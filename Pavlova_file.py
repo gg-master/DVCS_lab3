@@ -1,7 +1,7 @@
 import random
 import heapq
 
-#ifgkkjdo
+#hgfdhcd
 class Maze:
     def __init__(self, width, height):
         self.width = width

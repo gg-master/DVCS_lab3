@@ -56,8 +56,9 @@ class Maze:
         return maze_str
 
 if __name__ == "__main__":
-    width = 21
-    height = 21
+    #changed default sizes
+    width = 10
+    height = 10
     maze = Maze(width, height)
     maze.generate()
     print("Generated Maze:")

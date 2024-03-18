@@ -3,7 +3,7 @@ import heapq
 
 class Maze:
     def __init__(self, width, height):
-        self.width = width
+        self.width = width # комментарий 2
         self.height = height
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
@@ -16,7 +16,7 @@ class Maze:
             neighbors = [(x+2, y), (x-2, y), (x, y+2), (x, y-2)]
             unvisited_neighbors = [n for n in neighbors if 0 <= n[0] < self.width and 0 <= n[1] < self.height and self.grid[n[1]][n[0]] == 0]
             if unvisited_neighbors:
-                next_cell = random.choice(unvisited_neighbors) # комментарий
+                next_cell = random.choice(unvisited_neighbors)
                 nx, ny = next_cell
                 wall_x = (nx + x) // 2
                 wall_y = (ny + y) // 2

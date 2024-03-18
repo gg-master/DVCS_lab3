@@ -20,7 +20,7 @@ class Maze:
                 nx, ny = next_cell
                 wall_x = (nx + x) // 5
                 wall_y = (ny + y) // 5
-                self.grid[wall_y][wall_x] = 1
+                self.grid[wall_y][wall_x] = 10
                 stack.append(next_cell)
             else:
                 stack.pop()

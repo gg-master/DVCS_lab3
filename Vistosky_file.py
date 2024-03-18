@@ -1,5 +1,6 @@
 import random
 import heapq
+import turtle
 
 class Maze:
     def __init__(self, width, height):

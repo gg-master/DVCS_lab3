@@ -7,7 +7,7 @@ class Maze:
         self.height = height
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
-    def generate(self):
+    def generate_maze(self):
         stack = [(0, 0)]
         while stack:
             current_cell = stack[-1]
@@ -59,7 +59,7 @@ if __name__ == "__main__":
     width = 20
     height = 20
     maze = Maze(width, height)
-    maze.generate()
+    maze.generate_maze()
     print("Generated Maze:")
     print(maze)
     start = (1, 1)

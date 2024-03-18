@@ -76,9 +76,11 @@ if __name__ == "__main__":
     maze.generate()
     print("Generated Maze:")
     print(maze)
+
     start = (1, 1)
     end = (width - 2, height - 2)
     path = maze.solve(start, end)
+    
     print("Solved Maze:")
     for cell in path:
         x, y = cell

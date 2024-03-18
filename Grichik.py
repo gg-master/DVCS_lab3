@@ -39,7 +39,7 @@ class Maze:
                     continue
                 new_path = path + [current]
                 heapq.heappush(open_set, (len(new_path) + self.heuristic(neighbor, end), neighbor, new_path))
-
+//commit2
     def heuristic(self, a, b):
         return abs(b[0] - a[0]) + abs(b[1] - a[1])
 

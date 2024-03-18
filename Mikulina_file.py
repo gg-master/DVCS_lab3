@@ -4,7 +4,7 @@ import heapq
 class Maze:
     def __init__(self, width, height):
         self.width = width
-        self.height = height
+        self.height = height  //2
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
     def generate(self):

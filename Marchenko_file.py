@@ -56,13 +56,13 @@ class Maze:
         return maze_str
 
 if __name__ == "__main__":
-    width = 21
-    height = 21
+    width = 51
+    height = 51
     maze = Maze(width, height)
     maze.generate()
     print("Generated Maze:")
     print(maze)
-    start = (1, 1)
+    start = (4, 4)
     end = (width-2, height-2)
     path = maze.solve(start, end)
     print("Solved Maze:")

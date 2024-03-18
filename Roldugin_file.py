@@ -1,13 +1,13 @@
 import random
 import heapq
 
-class Maze:
+class MazeClass:
     def __init__(self, width, height):
         self.width = width
         self.height = height
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
-    def generate(self):
+    def generate_maze(self):
         stack = [(0, 0)]
         while stack:
             current_cell = stack[-1]
@@ -55,11 +55,12 @@ class Maze:
 "
         return maze_str
 
+#main func
 if __name__ == "__main__":
-    width = 21
-    height = 21
+    width = 20
+    height = 20
     maze = Maze(width, height)
-    maze.generate()
+    maze.generate_maze()
     print("Generated Maze:")
     print(maze)
     start = (1, 1)

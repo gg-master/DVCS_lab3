@@ -44,7 +44,7 @@ class Maze:
         return abs(b[0] - a[0]) + abs(b[1] - a[1])
 
     def get_neighbors(self, cell):
-        x, y = cell
+        x, y = cell[0], cell[1]
         neighbors = [(x+1, y), (x-1, y), (x, y+1), (x, y-1)]
         return [(nx, ny) for nx, ny in neighbors if 0 <= nx < self.width and 0 <= ny < self.height and self.grid[ny][nx] == 1]
 
@@ -56,8 +56,8 @@ class Maze:
         return maze_str
 
 if __name__ == "__main__":
-    width = 21
-    height = 21
+    width = 25
+    height = 25
     maze = Maze(width, height)
     maze.generate()
     print("Generated Maze:")

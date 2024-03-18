@@ -1,5 +1,6 @@
 import random
 import heapq
+import Math
 
 class Maze:
     def __init__(self, width, height):

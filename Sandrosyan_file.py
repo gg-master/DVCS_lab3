@@ -9,7 +9,7 @@ class Maze:
 
     def generate(self):
         stack = [(0, 0)]
-        while stack:
+        while stack != 0:
             current_cell = stack[-1]
             x, y = current_cell
             self.grid[y][x] = 1

@@ -1,5 +1,6 @@
 import random
 import heapq
+import Math
 
 class Maze:
     def __init__(self, width, height):
@@ -8,6 +9,7 @@ class Maze:
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
     def generate(self):
+        a = 1
         stack = [(0, 0)]
         while stack:
             current_cell = stack[-1]

@@ -3,7 +3,7 @@ import heapq
 
 class Maze:
     def __init__(self, width, height):
-        self.width = width
+        self.width = width # комментарий 2
         self.height = height
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
@@ -41,7 +41,7 @@ class Maze:
                 heapq.heappush(open_set, (len(new_path) + self.heuristic(neighbor, end), neighbor, new_path))
 
     def heuristic(self, a, b):
-        return abs(b[0] - a[0]) + abs(b[1] - a[1])
+        return abs(b[0] - a[0]) + abs(b[1] - a[1]) # комментарий второй коммит
 
     def get_neighbors(self, cell):
         x, y = cell

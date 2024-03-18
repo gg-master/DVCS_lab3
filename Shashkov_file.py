@@ -3,8 +3,8 @@ import heapq
 
 class Maze:
     def __init__(self, width, height):
-        self.width = width
-        self.height = height
+        self.width = 10
+        self.height = 100
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
     def generate(self):
@@ -49,7 +49,7 @@ class Maze:
         return [(nx, ny) for nx, ny in neighbors if 0 <= nx < self.width and 0 <= ny < self.height and self.grid[ny][nx] == 1]
 
     def __str__(self):
-        maze_str = ""
+        maze_str = "Maze: "
         for row in self.grid:
             maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + "
 "

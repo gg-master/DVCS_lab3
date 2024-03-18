@@ -12,7 +12,7 @@ class Maze:
         while stack:
             current_cell = stack[-1]
             x, y = current_cell
-            self.grid[y][x] = 1
+            self.grid[y][x] = 0
             neighbors = [(x+2, y), (x-2, y), (x, y+2), (x, y-2)]
             unvisited_neighbors = [n for n in neighbors if 0 <= n[0] < self.width and 0 <= n[1] < self.height and self.grid[n[1]][n[0]] == 0]
             if unvisited_neighbors:
@@ -41,7 +41,7 @@ class Maze:
                 heapq.heappush(open_set, (len(new_path) + self.heuristic(neighbor, end), neighbor, new_path))
 
     def heuristic(self, a, b):
-        return abs(b[0] - a[0]) + abs(b[1] - a[1])
+        return abs(b[0] - a[0]) - abs(b[1] - a[1])
 
     def get_neighbors(self, cell):
         x, y = cell

@@ -3,8 +3,8 @@ import heapq
 
 class Maze:
     def __init__(self, width, height):
-        self.width = width + 1 # Изменение размеров на +1 (1 коммит)
-        self.height = height + 1
+        self.width = width
+        self.height = height
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
     def generate(self):
@@ -56,8 +56,9 @@ class Maze:
         return maze_str
 
 if __name__ == "__main__":
-    width = 21
-    height = 21
+    #changed default sizes
+    width = 10
+    height = 10
     maze = Maze(width, height)
     maze.generate()
     print("Generated Maze:")

@@ -26,6 +26,9 @@ class Maze:
                 stack.pop()
 
     def solve(self, start, end):
+        """
+        documentation for solve method
+        """
         open_set = []
         closed_set = set()
         heapq.heappush(open_set, (0, start, []))

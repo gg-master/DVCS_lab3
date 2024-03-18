@@ -3,8 +3,8 @@ import heapq
 
 class Maze:
     def __init__(self, width, height):
-        self.width = width
-        self.height = height
+        self.width = width + 1 # Изменение размеров на +1 (1 коммит)
+        self.height = height + 1
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
     def generate(self):
